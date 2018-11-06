@@ -39,4 +39,7 @@ app.use('/axios/dist/axios.min.js',function(req,res){
 	res.set('Content-Type','application/json');
 	res.send(fs.readFileSync('./js/axios/axios.min.js'));
 });
-https.createServer(options,app).listen(80)
+app.use('/',function(req,res){
+		res.set('Content-Type','text/html');
+		res.send('<html><head><title>It works!</title></head><body>恭喜，kancolle-jscache开始工作了，下一步请自行修改hosts</body></html>');});
+https.createServer(options,app).listen(443)
