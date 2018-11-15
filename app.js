@@ -17,6 +17,18 @@ app.get('/ajax/libs/:name/:version/:filename',function(res,req){
 		req.send(fs.readFileSync(jsFile));
 	}catch(e){console.log(e);}
 });
+app.use('/tweenjs-0.6.2.min.js',function(req,res){
+	res.set('Content-Type','application/json');
+	res.send(fs.readFileSync('./js/tweenjs/tweenjs-0.6.2.min.js'));
+});
+app.use('/axios/dist/axios.min.js',function(req,res){
+	res.set('Content-Type','application/json');
+	res.send(fs.readFileSync('./js/axios/axios.min.js'));
+});
+app.use('/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js',function(req,res){
+	res.set('Content-Type','application/json');
+	res.send(fs.readFileSync('./js/twitter-bootstrap/bootstrap.min.js'));
+});
 app.use('/',function(req,res){
 		res.set('Content-Type','text/html');
 		res.send('<html><head><title>It works!</title></head><body>恭喜，kancolle-jscache开始工作了，下一步请自行修改hosts</body></html>');});
