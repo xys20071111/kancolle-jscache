@@ -4,4 +4,4 @@
 使用时需要手动改hosts 将cdnjs.cloudflare.com cdnjs.loli.net unpkg.com 改到127.0.0.1
 用完后再手动改回去
 # 已知问题
-有些游览器不信任我的自签名证书
+游览器也不信任我的自签名证书
